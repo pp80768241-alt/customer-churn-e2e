@@ -3,8 +3,8 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent / "src"))
 
-import pandas as pd
-from data_pipeline import clean, engineer_features, validate
+import pandas as pd  # noqa: E402
+from data_pipeline import clean, engineer_features, validate  # noqa: E402
 
 
 def _sample_df():
@@ -31,7 +31,14 @@ def test_clean_fills_missing_charges():
 
 def test_engineer_features_adds_columns():
     df = engineer_features(clean(_sample_df()))
-    for col in ["avg_charge_per_tenure", "is_month_to_month", "high_support_usage", "tenure_bucket"]:
+    expected_cols = [
+        "avg_charge_per_tenure",
+        "is_month_to_month",
+        "high_support_usage",
+        "tenure_bucket",
+    ]
+    for col in expected_cols:
+        assert col in df.columns
         assert col in df.columns
 
 
