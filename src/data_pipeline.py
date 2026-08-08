@@ -7,7 +7,6 @@ Run:
 
 from pathlib import Path
 import pandas as pd
-import numpy as np
 
 RAW_PATH = Path(__file__).parent.parent / "data" / "customers_raw.csv"
 PROCESSED_PATH = Path(__file__).parent.parent / "data" / "customers_processed.csv"
