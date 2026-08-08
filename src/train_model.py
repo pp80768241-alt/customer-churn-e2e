@@ -37,7 +37,13 @@ NUMERIC_FEATURES = [
     "is_month_to_month",
     "high_support_usage",
 ]
-CATEGORICAL_FEATURES = ["contract_type", "payment_method", "internet_service", "partner", "dependents"]
+CATEGORICAL_FEATURES = [
+    "contract_type",
+    "payment_method",
+    "internet_service",
+    "partner",
+    "dependents",
+]
 TARGET = "churn"
 
 
