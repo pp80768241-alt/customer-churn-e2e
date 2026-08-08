@@ -10,10 +10,10 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent / "src"))
 
-import joblib
-import pandas as pd
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+import joblib  # noqa: E402
+import pandas as pd  # noqa: E402
+from fastapi import FastAPI, HTTPException  # noqa: E402
+from pydantic import BaseModel, Field  # noqa: E402
 
 from explain import explain_prediction  # noqa: E402
 from train_model import MODEL_PATH, NUMERIC_FEATURES, CATEGORICAL_FEATURES  # noqa: E402
