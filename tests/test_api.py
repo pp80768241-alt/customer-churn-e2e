@@ -4,8 +4,8 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 sys.path.append(str(Path(__file__).parent.parent / "src"))
 
-from fastapi.testclient import TestClient
-from api.main import app
+from fastapi.testclient import TestClient  # noqa: E402
+from api.main import app  # noqa: E402
 
 client = TestClient(app)
 
